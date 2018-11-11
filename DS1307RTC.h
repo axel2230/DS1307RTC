@@ -22,7 +22,7 @@ class DS1307RTC
     static unsigned char isRunning();
     static void setCalibration(char calValue);
     static char getCalibration();
-    static float Temperature();
+    static float temperature();
   private:
     static bool exists;
     static uint8_t dec2bcd(uint8_t num);
