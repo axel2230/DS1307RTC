@@ -214,7 +214,7 @@ uint8_t DS1307RTC::bcd2dec(uint8_t num)
 
 bool DS1307RTC::exists = false;
 
-float DS1307RTC::Temperature() {
+float DS1307RTC::temperature() {
 	// Checks the internal thermometer on the DS3231 and returns the 
 	// temperature as a floating-point value.
 
