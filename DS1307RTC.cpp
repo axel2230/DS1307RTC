@@ -225,10 +225,10 @@ float DS1307RTC::temperature() {
   float temp3231;
   
   // temp registers (11h-12h) get updated automatically every 64s
-  Wire.beginTransmission(CLOCK_ADDRESS);
+  Wire.beginTransmission(DS1307_CTRL_ID);
   Wire.write(0x11);
   Wire.endTransmission();
-  Wire.requestFrom(CLOCK_ADDRESS, 2);
+  Wire.requestFrom(DS1307_CTRL_ID, 2);
 
   // Should I do more "if available" checks here?
   if(Wire.available()) {
